@@ -1,0 +1,27 @@
+<?php
+class Movie {
+    public $title;
+    public $genre;
+    public $director;
+    public $releaseYear;
+    public $duration;
+
+    public function setMovie($title, $genre, $director, $releaseYear, $duration) {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->director = $director;
+        $this->releaseYear = $releaseYear;
+        $this->duration = $duration;
+    }
+
+    public function getMovieInfo() {
+        return "Movie: $this->title, Genre: $this->genre, Director: $this->director, Year: $this->releaseYear, Duration: $this->duration minutes";
+    }
+}
+
+$movie = new Movie();
+$movie->setMovie("Titanic", "Romance", "James Cameron", 1997, 195);
+print ($movie->getMovieInfo());
+
+
+?>
