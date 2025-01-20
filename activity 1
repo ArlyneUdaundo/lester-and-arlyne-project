@@ -1,0 +1,31 @@
+<?php
+class Product {
+    public $name;
+    public $price;
+    public $category;
+    public $description;
+    public $stock;
+
+    
+    public function setProduct($name, $price, $category, $description, $stock) {
+        $this->name = $name;
+        $this->price = $price;
+        $this->category = $category;
+        $this->description = $description;
+        $this->stock = $stock;
+    }
+
+    public function getProductInfo() {
+        return "Product Details:
+        Name: $this->name
+        Price: $$this->price
+        Category: $this->category
+        Description: $this->description
+        Stock: $this->stock units available";
+    }
+}
+
+$product = new Product();
+$product->setProduct("Smartphone", 20000, "Electronics", "Latest smartphone with 128GB storage", 50);
+echo $product->getProductInfo();
+?>
